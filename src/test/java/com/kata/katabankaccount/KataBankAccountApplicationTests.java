@@ -12,17 +12,16 @@ class KataBankAccountApplicationTests {
     void contextLoads() {
     }
 
-
     @Test
     void depositMoney() {
-        BankAccount account = new BankAccount(10);
+        BankAccount account = new BankAccount(20);
         account.makeDeposit(100);
-        Assertions.assertEquals(110, account.getBalance());
+        Assertions.assertEquals(120, account.getBalance());
     }
 
     @Test
     void retrieveMoneyWithSufficientBalance() {
-        BankAccount account = new BankAccount(100, -60);
+        BankAccount account = new BankAccount(100, -70);
         account.makeWithdrawalWithLimitChecking(130);
         Assertions.assertEquals(-30, account.getBalance());
     }

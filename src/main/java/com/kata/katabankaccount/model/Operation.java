@@ -15,7 +15,6 @@ public abstract class Operation implements IOperation {
         this.date = date;
         this.accountBalance = accountBalance;
     }
-
     public void setAmount(double amount) {
         this.amount = amount;
     }
